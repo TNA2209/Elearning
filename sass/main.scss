@@ -1,6 +1,7 @@
 //HELPERS
 @import "./Helpers/variables";
 @import "./Helpers/mixin";
+@import "./Helpers/extend";
 
 //VENDORS
 
@@ -11,9 +12,13 @@
 //LAYOUT
 @import "./Layouts/header";
 @import "./Layouts/footer";
+@import "./Layouts/intro";
+@import "./Layouts/course";
+
 
 //COMPONENTS
 @import "./components/button";
+@import "./components/cover";
 
 //PAGES
 @import "./Pages/home";

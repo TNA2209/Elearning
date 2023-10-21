@@ -1,0 +1,11 @@
+.courses{
+    margin: $mg-1 0;  
+    .courses__content{
+        width: 90%;
+        margin: auto;
+        .courses__left{
+            background-color: $color-gray-1;
+            padding: 0 2rem;
+        }
+    }  
+}
