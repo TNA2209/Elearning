@@ -20,7 +20,7 @@
     border: 1px solid $border-hover;
 }
 
-@mixin styleFormSearch($bg-color,$bg-color-focus,$border-color) {
+@mixin styleFormSearch($bg-color, $bg-color-focus, $border-color) {
     .input-group {
         background-color: $bg-color;
 
@@ -74,5 +74,19 @@
             }
         }
 
+    }
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoint, $key: $screen ) {
+        $value: map-get($map: $breakpoint, $key: $screen);
+
+        @media screen and (max-width:$value) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "`{$screen}` isn't breakpoint"
     }
 }

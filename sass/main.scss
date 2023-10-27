@@ -14,15 +14,38 @@
 @import "./Layouts/footer";
 @import "./Layouts/intro";
 @import "./Layouts/course";
+@import "./Layouts/viewing";
+@import "./Layouts/banner";
+@import "./Layouts/categories";
+@import "./Layouts/students";
+@import "./Layouts/panners";
+@import "./Layouts/jobs";
+@import "./Layouts/sidebarMini";
+
+
+
 
 
 //COMPONENTS
 @import "./components/button";
 @import "./components/cover";
+@import "./components/card";
 
 //PAGES
 @import "./Pages/home";
 
 //THEMES
 
+@import "./Theme/dark/resetDark";
+@import "./Theme/dark/siddebarMiniDarkmode";
+@import "./Theme/dark/headerDark";
+@import "./Theme/dark/coursesDark";
+@import "./Theme/dark/cardDark";
+@import "./Theme/dark/viewing";
+@import "./Theme/dark/categoriesDark";
+@import "./Theme/dark/studentsDark";
+@import "./Theme/dark/partnersDark";
+@import "./Theme/dark/jobsDark";
+@import "./Theme/dark/footerDark";
+@import "./Theme/dark/buttonDark";
 

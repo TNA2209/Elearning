@@ -1,0 +1,49 @@
+.panners {
+    background-color: $color-gray-6;
+    padding: $pd-3 0;
+
+    .panner__content {
+        width: 70%;
+        margin: 0 auto;
+
+        .panners_text {
+            text-align: center;
+        }
+
+        .panners__imgs {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    @include responsive("extra-large") {
+        .panner__content {
+            width: 80%;
+        }
+    }
+
+    @include responsive("large") {
+        .panner__content {
+            width: 80%;
+        }
+    }
+
+    @include responsive("medium") {
+
+        .panner__content {
+            width: 60%;
+
+            .panners__imgs {
+                flex-wrap: wrap;
+                text-align: center;
+
+                .panners__items {
+                    width: 50%;
+                    margin-bottom: $mg-0 + 5;
+                }
+            }
+
+
+        }
+    }
+}

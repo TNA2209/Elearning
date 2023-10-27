@@ -5,15 +5,16 @@
     .intro__content {
         width: 80%;
         margin: auto;
-        .intro__item{
+
+        .intro__item {
             display: flex;
             align-items: center;
-            
         }
+
         .intro__icon {
             font-size: $fs-6;
             color: $color-white-0;
-            margin-right: $mg-1; 
+            margin-right: $mg-1;
         }
 
         .intro__detail {
@@ -30,4 +31,17 @@
             }
         }
     }
+
+    @include responsive("extra-large") {
+        .intro__content {
+            .intro__icon {
+                display: none;
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        display: none;
+    }
+
 }

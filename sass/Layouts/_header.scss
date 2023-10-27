@@ -10,6 +10,14 @@
             text-align: center;
             margin-right: 0;
 
+            .logo-black {
+                display: inline-block;
+            }
+
+            .logo-white {
+                display: none;
+            }
+
             img {
                 width: 110px;
             }
@@ -28,61 +36,7 @@
 
         .myNavbar__form-search {
             flex-grow: 8;
-            @include styleFormSearch($color-white-cream,$color-white-0,$color-gray-4)
-            // .input-group {
-            //     background-color: $color-white-cream;
-
-            //     .form-control {
-            //         background-color: transparent;
-            //         border-color: transparent;
-            //         box-shadow: none;
-            //         transition: none;
-            //         color: $color-black-light;
-
-            //         &::placeholder {
-            //             color: $color-black-light;
-            //         }
-
-            //         &:focus {
-            //             background-color: $color-white-0;
-            //             border-top-color: $color-gray-4;
-            //             border-bottom-color: $color-gray-4;
-            //             border-left-color: $color-gray-4;
-            //         }
-
-            //         // +
-            //         &:focus+.input-group-append {
-            //             .input-group-text {
-            //                 background-color: $color-white-0;
-            //                 border-top-color: $color-gray-4;
-            //                 border-bottom-color: $color-gray-4;
-            //                 border-right-color: $color-gray-4;
-            //                 color: $color-red-0;
-
-            //                 // & parent selector
-            //                 &:hover {
-            //                     color: $color-white-0;
-            //                     background-color: $color-red-0;
-            //                 }
-            //             }
-            //         }
-            //     }
-
-            //     .input-group-append {
-            //         .input-group-text {
-            //             background-color: transparent;
-            //             border-color: transparent;
-            //             color: $color-red-0;
-
-            //             // & parent selector
-            //             &:hover {
-            //                 color: $color-white-0;
-            //                 background-color: $color-red-0;
-            //             }
-            //         }
-            //     }
-
-            // }
+            @include styleFormSearch($color-white-cream, $color-white-0, $color-gray-4)
         }
 
     }
@@ -103,7 +57,8 @@
 
                 &:hover {
                     background-color: $color-gray-1;
-                    .overPlay{
+
+                    .overPlay {
                         display: block;
                     }
                 }
@@ -119,6 +74,7 @@
                     right: 0;
                     border-top: 1px solid $color-gray-1;
                     box-shadow: 0 4px 16px $color-gray-5;
+                    z-index: 2;
 
                     &::before {
                         content: "";
@@ -148,11 +104,86 @@
             }
 
             .myNavbar__buttons {
+                display: flex;
+
                 &:hover {
                     background-color: transparent;
                 }
 
+                .button--white {
+                    margin-right: $mg-0;
+                }
+
+                .button {
+                    white-space: nowrap;
+                }
+
             }
+        }
+    }
+
+
+
+    @media screen and (min-width:1200px) and (max-width:1355px) {
+        .myNavbar__right {
+            .navbar-nav {
+                .nav-item {
+                    white-space: nowrap;
+
+                    .nav-link {
+                        font-size: $fs-1 - 1;
+                    }
+
+                    .overPlay {
+                        white-space: normal;
+                    }
+                }
+
+            }
+        }
+
+        .myNavBar--reset {
+            padding-left: 0;
+        }
+    }
+
+    // max-width 1200px
+    @include responsive("extra-large") {
+
+        .business,
+        .instructor {
+            display: none;
+        }
+
+        .myNavbar__right {
+            .navbar-nav {
+                justify-content: space-around;
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        .myNavbar__left {
+
+            .myNavbar__catagories,
+            .myNavbar__form-search {
+                display: none;
+            }
+
+
+        }
+
+        .myNavbar__right {
+            width: 50%;
+            margin-left: auto;
+            text-align: center;
+
+            .navbar-nav {
+                .myNavbar__buttons {
+                    display: none;
+                }
+            }
+
         }
     }
 }

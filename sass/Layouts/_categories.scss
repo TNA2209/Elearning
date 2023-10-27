@@ -1,0 +1,25 @@
+.categories {
+    margin-top: $mg-3;
+
+    .categories__content {
+        width: 90%;
+        margin: auto;
+
+        h2 {
+            font-size: $fs-5;
+        }
+
+        .categories__items {
+            padding: $pd-1;
+            font-size: $fs-3;
+            border: 1px solid $color-black-1;
+            margin-bottom: $mg-2 - 5;
+
+            &:hover {
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
+        }
+
+    }
+
+}
